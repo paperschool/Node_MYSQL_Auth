@@ -1,0 +1,55 @@
+
+{{#if success}}
+  <div class="alert alert-success" role="alert">
+    {{success}}
+  </div>
+{{/if }}
+
+<div class="login-container">
+
+  <div class="login-title">
+    Register
+  </div>
+
+  <form method="POST" action="/registration" class="login-input-container">
+
+    <input class="text-input" type="text" name="username" placeholder="Username"/>
+
+
+
+    {{#if username_error }}
+      <div class="alert-box alert-box-bad">
+        <ul>
+          {{#each username_error}}
+              <li>{{this.msg}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
+
+    <input class="text-input" type="text" name="email" placeholder="Email"/>
+
+    {{#if email_error }}
+      <div class="alert-box alert-box-bad">
+        {{#each email_error}}
+            <a class="form-error ">{{this.msg}}</a><br />
+        {{/each}}
+      </div>
+    {{/if}}
+
+    <input class="text-input" type="password" name="password" placeholder="Password"/>
+
+    {{#if password_error }}
+      <div class="alert-box alert-box-bad">
+        {{#each password_error}}
+            <a class="form-error ">{{this.msg}}</a><br />
+        {{/each}}
+      </div>
+    {{/if}}
+
+    <input class="text-input" type="password" name="passwordMatch" placeholder="Password Match"/>
+    <input class="text-input flat-button" type="submit" value="register"/>
+
+  </form>
+
+</div>

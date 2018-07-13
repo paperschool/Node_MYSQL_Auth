@@ -1,0 +1,16 @@
+<div class="dash-main">
+
+  {{> scroll-panel }}
+
+  <div class="dash-content-main"></div>
+
+  <!--  This needs to be the recipe client side script -->
+  <script src="/js/ingredients.js"></script>
+
+  <script>
+    $(document).ready(() => {
+      ge.fetchAllIngredients();
+    });
+  </script>
+
+</div>

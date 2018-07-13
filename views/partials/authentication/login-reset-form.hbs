@@ -1,0 +1,26 @@
+
+
+{{#if error}}
+  <div class="alert alert-danger" role="alert">
+    {{error}}
+  </div>
+{{/if}}
+
+{{#if success}}
+  <div class="alert alert-success" role="alert">
+    {{success}}
+  </div>
+{{/if }}
+
+
+<div class="login-container">
+
+  <div class="login-title">Oops!</div>
+
+  <div class="password-reset-prompt">{{ recovery_message }}</div>
+
+  <form class="login-input-container" method="get" action="/login">
+    <div><input class="text-input flat-button flat-button-bad" type="submit" value="return"/></div>
+  </form>
+
+</div>

@@ -1,0 +1,52 @@
+<div class="scroll-panel-search">
+  <input class="text-input search-text-input" id="item-search" type="text" name="searchingredients" placeholder="Search..."/>
+</div>
+
+<div class="dash-content-scroll-panel" id="scoll-panel-items">
+  <!-- this used to be populated by the server -->
+</div>
+
+<div class="scroll-panel-new">
+  <input class="text-input flat-button new-item-button" id="scroll_panel_new" type="submit" value="new"/>
+</div>
+
+<script>
+
+// on page ready
+$(document).ready(() => {
+
+  // tracking key up events on the search box
+  $('#item-search').on('keyup',function(e){
+
+    // storing current search value
+    var search = $(this).val();
+
+    // null search check method
+    var nullCheck = function(search){
+      return search === "" || search === null || search.length === 0;
+    }
+
+    // a string comparator
+    var similar = function(v1,v2){
+      return v1.toUpperCase().includes(v2.toUpperCase()) ||
+             v2.toUpperCase().includes(v1.toUpperCase());
+    }
+
+    // if search is null, show all items otherwise find similar items
+    $('#scoll-panel-items').children().each(function(i,v){
+      // if search is null or search matches items
+      if( nullCheck(search) || similar(v.text,search) ){
+        // show item
+        $(this).show();
+      } else {
+        // hide item
+        $(this).hide();
+      }
+    });
+
+
+  });
+
+});
+
+</script>

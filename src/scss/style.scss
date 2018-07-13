@@ -1,0 +1,146 @@
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500');
+
+@import "am_colours";
+
+@font-face {
+  font-family: 'glyphicons';
+  src: url('/font/glyphicons.woff2') format('woff2');
+}
+
+* {
+
+	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+
+	margin: 0;
+	padding: 0;
+
+	background-color: $col_dark;
+}
+
+/* For browser autofill colour replacement */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px $col_mustard inset;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.text-input {
+	border: 0;
+	margin-top:10px;
+	padding:10px;
+
+	width: 249px;
+
+	background: none;
+	box-shadow: none;
+
+	border-radius: 0px;
+	background-color: #dfe6e9;
+
+  font-size: 20px;
+
+}
+
+.text-input-bad {
+  border-bottom : 2px solid $col_blood;
+}
+
+.text-input-good {
+  border-bottom : 2px solid $col_grass;
+}
+
+.text-input-warning {
+  border-bottom : 2px solid $col_mustard;
+}
+
+.flat-button {
+	padding:10px;
+	width: 249px;
+	background-color: #2ecc71;
+	color:#ecf0f1;
+	text-align: center;
+  font-size: 1em;
+}
+
+.flat-button-good {
+	background-color: $col_grass;
+	color:white;
+}
+
+.flat-button-bad {
+	background-color: $col_blood;
+	color:white;
+}
+
+.flat-button-neutral {
+	background-color: $col_sky;
+	color:white;
+}
+
+.flat-button:hover {
+  background-color: $col_solid;
+}
+
+.alert-box {
+
+	border: 0;
+	margin-top:10px;
+	padding:10px;
+
+	width: 249px;
+
+	background-color: $col_light;
+
+	border-radius: 0px;
+	color: $col_dark;
+
+	font-size: 0.8em;
+	text-align: center;
+
+}
+
+.alert-box-good {
+	color: $col_grass;
+}
+
+.alert-box-bad {
+	color: $col_blood;
+}
+
+.alert-box-neutral {
+	color: $col_marin;
+}
+
+.form-error {
+	color:$col_blood;
+	font-size: 0.8em;
+}
+
+.container {
+	margin-top:20px;
+}
+
+/* unvisited link */
+a:link,a:visited {
+		text-decoration: none;
+		color: inherit;
+}
+
+a:active,a:hover {}
+
+.icon {
+    position: absolute;
+    display: inline-block;
+    font-family: 'glyphicons';
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialised;
+    -moz-osx-font-smoothing: greyscale;
+}

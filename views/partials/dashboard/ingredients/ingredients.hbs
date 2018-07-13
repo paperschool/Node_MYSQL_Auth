@@ -1,0 +1,21 @@
+<div class="dash-main">
+
+  {{> scroll-panel }}
+
+  <div class="dash-content-main">
+
+    {{> ingredients-form }}
+
+  </div>
+
+  {{> ingredients-breakdown }}
+
+  <script src="/js/ingredients.js"></script>
+
+  <script>
+    $(document).ready(() => {
+      ge.fetchAllIngredients();
+    });
+  </script>
+
+</div>

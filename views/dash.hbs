@@ -1,0 +1,21 @@
+{{> header }}
+
+<script src="/js/sidebar.js"></script>
+
+<div class="dash-wrapper">
+
+  {{> dash-header }}
+
+  {{> dash-side-bar }}
+
+  {{#if ingredients }}
+    {{>ingredients }}
+  {{/if }}
+
+  {{#if recipes }}
+    {{>recipes }}
+  {{/if }}
+
+</div>
+
+{{> footer-end }}

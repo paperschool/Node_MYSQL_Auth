@@ -1,0 +1,17 @@
+<div class="container">
+
+  <a href="/"><button type="button" class="btn btn-primary">Home</button></a>
+
+  {{#if isAuthenticated }}
+
+    <a href="/profile"><button type="button" class="btn btn-primary">Profile</button></a>
+    <a href="/logout"><button type="button" class="btn btn-danger">Logout</button></a>
+
+  {{else}}
+
+    <a href="/registration"><button type="button" class="btn btn-primary">Register</button></a>
+    <a href="/login"><button type="button" class="btn btn-primary">Login</button></a>
+
+  {{/if}}
+
+</div>

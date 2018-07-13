@@ -1,0 +1,13 @@
+<div class="dash-side-bar">
+  {{#if sidebar }}
+    {{#each sidebar}}
+      <a href="{{this.url}}"
+        class="dash-side-bar-option
+        {{#if active}} dash-side-bar-option-active {{/if}}
+        {{#if this.logout}} dash-side-bar-option-logout {{/if}}
+
+        ">{{this.label}}</a>
+
+    {{/each}}
+  {{/if}}
+</div>

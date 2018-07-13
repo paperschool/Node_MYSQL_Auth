@@ -1,0 +1,62 @@
+
+@import 'am_colours';
+
+.login-container {
+
+  position:absolute;
+
+  width:300px;
+  height:auto;
+
+  left:50%;
+  top:10%;
+
+  margin-left: -150px;
+  margin-top: 10px;
+  padding:25px;
+
+  border-radius: 20px;
+  background-color: #b2bec3;
+
+}
+
+.login-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height:25%;
+  color:white;
+  font-size: 2em;
+  text-align: center;
+}
+
+.password-reset-prompt {
+  padding: 10px;
+  color:#2c3e50;
+  text-decoration: underline;
+  font-size: 1em;
+  text-align: center;
+}
+
+.login-input-error {
+  margin-top: 10px;
+  color: $col_blood;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+
+.login-input-container {
+  height:50%;
+  align-items: center;
+}
+
+.login-submit {
+  padding:10px;
+  width: 269px;
+  background-color: #2ecc71;
+  color:#ecf0f1;
+}
+
+.login-submit:hover {
+  background-color: #27ae60;
+}

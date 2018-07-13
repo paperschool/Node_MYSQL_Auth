@@ -1,0 +1,68 @@
+
+<form class="ingredient-form-container" id="ingredient-form" action="#">
+
+  <div class="ingredient-form-title">Ingredient</div>
+
+  <div class="ingredient-input-title">Name</div>
+  <div class="ingredient-input">
+    <input class="text-input search-text-input" type="text" name="ingredient_name" id="ingredient_name" placeholder="'Carrots'"/>
+  </div>
+  <div class="ingredient-description"></div>
+
+
+  <div class="ingredient-input-title">Grams</div>
+  <div class="ingredient-input">
+    <input class="text-input search-text-input" type="text" name="ingredient_grams" id="ingredient_grams" placeholder="1.0" value="100"/>
+  </div>
+  <div class="ingredient-description"></div>
+
+  <div class="ingredient-form-spacer"></div>
+
+  <div class="ingredient-input-title">Calories (g)</div>
+  <div class="ingredient-input">
+    <input class="text-input search-text-input" type="text" name="ingredient_calories" id="ingredient_calories" placeholder="0.0"/>
+  </div>
+  <div class="ingredient-description"></div>
+
+  <div class="ingredient-input-title">Fats (g)</div>
+  <div class="ingredient-input">
+    <input class="text-input search-text-input" type="text" name="ingredient_fats" id="ingredient_fats" placeholder="0.0"/>
+  </div>
+  <div class="ingredient-description"></div>
+
+  <div class="ingredient-input-title">Carbohydrates (g)</div>
+  <div class="ingredient-input">
+    <input class="text-input search-text-input" type="text" name="ingredient_carbohydrates" id="ingredient_carbohydrates" placeholder="0.0"/>
+  </div>
+  <div class="ingredient-description"></div>
+
+  <div class="ingredient-input-title">Proteins (g)</div>
+  <div class="ingredient-input">
+    <input class="text-input search-text-input" type="text" name="ingredient_proteins" id="ingredient_proteins" placeholder="0.0"/>
+  </div>
+  <div class="ingredient-description"></div>
+
+  <div class="ingredient-input-title">Sodium (g)</div>
+  <div class="ingredient-input">
+    <input class="text-input search-text-input" type="text" name="ingredient_sodium" id="ingredient_sodium" placeholder="0.0"/>
+  </div>
+  <div class="ingredient-description"></div>
+
+  <div class="ingredient-form-spacer"></div>
+
+  <div class="ingredient-input-quarter-left">
+    <input class="text-input flat-button new-item-button" name="ingredient_save" id="ingredient_save" type="submit" value="Save"/>
+  </div>
+
+  <!-- <div class="ingredient-input-quarter-left-middle">
+    <input class="text-input flat-button flat-button-bad new-item-button" name="ingredient_delete" id="ingredient_delete" type="submit" value="Delete"/>
+  </div> -->
+
+
+</form>
+
+<script>
+  $(".ingredient-form-container").submit(function(e){
+      return false;
+  });
+</script>

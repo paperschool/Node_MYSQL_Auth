@@ -1,0 +1,53 @@
+
+
+{{#if error}}
+  <div class="alert alert-danger" role="alert">
+    {{error}}
+  </div>
+{{/if}}
+
+{{#if success}}
+  <div class="alert alert-success" role="alert">
+    {{success}}
+  </div>
+{{/if }}
+
+
+<div class="login-container">
+
+  <div class="login-title">
+    Login
+  </div>
+
+  <form class="login-input-container" method="POST" action="/login">
+    <div><input class="text-input" type="text" name="username" placeholder="Username"/></div>
+    <div><input class="text-input" type="password" name="password" placeholder="Password"/></div>
+    <div><input class="text-input flat-button" type="submit" value="login"/></div>
+
+
+    {{#if login_error}}
+      <div class="alert-box alert-box-bad">
+        {{ login_error }}
+      </div>
+    {{/if}}
+
+    {{#if login_prompt}}
+      <div class="alert-box alert-box-good">
+        {{ login_prompt }}
+      </div>
+    {{/if}}
+
+
+
+    <div class="password-reset-prompt">
+      <a href="/reset">
+        forgot your password?
+      </a>
+    </div>
+  </form>
+
+  <form method="get" action="/registration">
+    <div><input class="text-input flat-button flat-button-neutral" type="submit" value="register?"/></div>
+  </form>
+
+</div>
